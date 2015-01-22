@@ -118,7 +118,7 @@ class DetailHandler(tornado.web.RequestHandler):
 
 class LoginHandler(BaseHandler):
 	def get(self):
-		self.render('login.html')
+		self.render('Login.html')
 	def post(self):
 		name = self.get_argument('username','')
 		passwd = self.get_argument('passwd','')

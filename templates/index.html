@@ -14,7 +14,7 @@
         <div class="col-sm-8 blog-main">
         {% for article in articles %}
           <div class="blog-post">
-            <a href="/detail?id={{article['id']}}"><h2 class="blog-post-title">{{article['title']}}</h2></a>
+            <a href="/detail?id={{article['id']}}"><h3 class="blog-post-title">{{article['title']}}</h3></a>
             <p class="blog-post-meta">{{article['create_time']}}</p>
             {% autoescape None %}
             {{article['content']}}
