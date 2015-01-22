@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
+
+
+</head>
+
+<div style='margin-right: auto;margin-left: auto;width:800px'>
+
+<form action="/add_blog/" method="post">
+Title : <input name='title' />
+  <textarea name="content" id="content" rows="10" cols="80">
+      This is my textarea to be replaced with CKEditor.
+  </textarea>
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'content',{
+      width:'800px',
+      height:'500px',
+      language : 'zh-cn'
+    } );
+</script>
+<input type='submit' value = 'Submit' />
+<input type='button' value = 'Cancel' />
+</form>
+</div>
+
+
+
+
+

@@ -1,0 +1,49 @@
+{% extends 'menu.html' %}
+
+
+{% block body %}
+
+    <div class="container">
+
+      <div class="blog-header">
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+        {% for article in articles %}
+          <div class="blog-post">
+            <a href="/detail?id={{article['id']}}"><h2 class="blog-post-title">{{article['title']}}</h2></a>
+            <p class="blog-post-meta">{{article['create_time']}}</p>
+            {% autoescape None %}
+            {{article['content']}}
+          </div><!-- /.blog-post -->
+        {% end %}
+          
+        <!--
+          <nav>
+            <ul class="pager">
+              <li class="disabled"><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+          <nav>
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </nav>
+        -->
+        </div><!-- /.blog-main -->
+
+        
+
+{% end %}
+

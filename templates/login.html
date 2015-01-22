@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>登陆</title>
+</head>
+<body>
+<div>
+<form action='/login' method="post">
+{% raw xsrf_form_html() %}
+用户名：<input name='username'>
+<br>
+密码：<input name="passwd">
+<br>
+<input type='submit' value='Submit'>
+
+</form>
+</div>
+</body>
+</html>
+
